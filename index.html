@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+    </script>
+
+  <script src="https://kit.fontawesome.com/425558648d.js" crossorigin="anonymous">
+  </script>
+
+  <link rel="stylesheet" href="style.css">
+  <title>PhotoFeed-Bootstrap</title>
+</head>
+
+<body>
+
+  <div class="first">
+    <nav class="navbar navbar-expand-lg bg-light">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center gap-1" href="#">
+          <i class="fa-brands fa-instagram"></i>
+          <span>Instagram</span>
+        </a>
+
+        <button type="button" class="btn btn-success ms-auto" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+          Create a new post
+        </button>
+
+        <ul class="dropdown-menu"></ul>
+
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+          aria-labelledby="staticBackdropLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="staticBackdropLabel">Create a new post</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                Caption:
+                <div class="form-floating me-1">
+                  <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+                  <label for="floatingTextarea">Add the caption of your post here</label></br>
+                </div>
+                <button type="button" class="btn btn-light btn-sm"><i class="fa-solid fa-camera"></i></button>
+                <button type="button" class="btn btn-light btn-sm"><i class="fa-solid fa-location-dot"></i></button>
+              </div>
+
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-success">Publish</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="dropdown">
+          <button class="nav-link dropdown-toggle d-flex align-items-center ms-1" href="#" id="navbarDropdownMenuLink"
+            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fa-solid fa-gear"></i>
+          </button>
+
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
+            <li>
+              <a class="dropdown-item" href="#">Profile</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#">Accesibility</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#">Privacy and data</a>
+            </li>
+            <li><br class="dropdown-divider"></li>
+            <li>
+              <a class="dropdown-item text-danger" href="#">Long out</a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </nav>
+  </div>
+
+  <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
+    <li class="nav-item" role="presentation">
+      <button class="nav-link active" id="grid-tab" data-bs-toggle="tab" data-bs-target="#grid-tab-pane" type="button"
+        role="tab" aria-controls="grid-tab-pane" aria-selected="true"><i class="fa-solid fa-table-cells"></i></button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="column-tab" data-bs-toggle="tab" data-bs-target="#column-tab-pane" type="button"
+        role="tab" aria-controls="column-tab-pane" aria-selected="false"><i class="fa-solid fa-stop"></i></button>
+    </li>
+  </ul>
+  <div class="tab-content" id="myTabContent">
+    <div class="tab-pane fade show active" id="grid-tab-pane" role="tabpanel" aria-labelledby="grid-tab" tabindex="0">
+      <div class="container text-center">
+        <div class="row justify-content-center row-cols-2 row-cols-md-3 row-cols-lg-3">
+          <div class="col overflow-hidden p-1">
+            <img
+              src="https://images.unsplash.com/photo-1745176593875-9afdb66e31f7?q=80&w=2576&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="Image 1" class="galeria" />
+          </div>
+          <div class="col overflow-hidden p-1">
+            <img
+              src="https://images.unsplash.com/photo-1743360543515-d3b506e6d3c2?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="Image 2" class="galeria" />
+          </div>
+          <div class="col overflow-hidden p-1">
+            <img
+              src="https://images.unsplash.com/photo-1743031031853-15698b5b8419?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="Image 3" class="galeria" />
+          </div>
+          <div class="col overflow-hidden p-1">
+            <img
+              src="https://images.unsplash.com/photo-1745750747233-c09276a878b3?q=80&w=2650&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="Image 4" class="galeria" />
+          </div>
+          <div class="col overflow-hidden p-1">
+            <img
+              src="https://images.unsplash.com/photo-1744429523595-2c06b8611242?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="Image 5" class="galeria" />
+          </div>
+          <div class="col overflow-hidden p-1">
+            <img
+              src="https://plus.unsplash.com/premium_photo-1721268770804-f9db0ce102f8?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="Image 6" class="galeria" />
+          </div>
+          <div class="col overflow-hidden p-1">
+            <img
+              src="https://images.unsplash.com/photo-1745179177381-5709a1e1723b?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="Image 7" class="galeria" />
+          </div>
+          <div class="col overflow-hidden p-1">
+            <img
+              src="https://images.unsplash.com/photo-1744230350348-23305ba56e6c?q=80&w=2557&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="Image 8" class="galeria" />
+          </div>
+          <div class="col overflow-hidden p-1">
+            <img
+              src="https://images.unsplash.com/photo-1742943679521-f4736500a471?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="Image 9" class="galeria" />
+          </div>
+          <div class="col overflow-hidden p-1">
+            <img
+              src="https://images.unsplash.com/photo-1744198013781-eeb3135aaa0c?q=80&w=2564&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="Image 10" class="galeria" />
+          </div>
+          <div class="col overflow-hidden p-1">
+            <img
+              src="https://images.unsplash.com/photo-1741290726567-a1aaaa43f625?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="Image 11" class="galeria" />
+          </div>
+          <div class="col overflow-hidden p-1">
+            <img
+              src="https://images.unsplash.com/photo-1744882838449-b3ad2ceff9a8?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="Image 12" class="galeria" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="tab-pane fade justify-content-center" id="column-tab-pane" role="tabpanel" aria-labelledby="column-tab"
+    tabindex="0">
+
+
+    <div class="card border-ligth mb-3 mx-auto d-block " style="max-width: 20rem;">
+      <h5 class="card-title card-header">Flowers!</h5>
+      <img
+        src="https://images.unsplash.com/photo-1745176593875-9afdb66e31f7?q=80&w=2576&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        class="feed rounded mx-auto d-block" alt="Image 1">
+      <div class="card-body">
+        <h5 class="card-title">864 likes</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+          content.</p>
+      </div>
+    </div>
+
+    <div class="card border-ligth mb-3 mx-auto d-block " style="max-width: 20rem;">
+      <h5 class="card-title card-header">Street!</h5>
+      <img
+        src="https://images.unsplash.com/photo-1743360543515-d3b506e6d3c2?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        class="feed rounded mx-auto d-block" alt="Image 2">
+      <div class="card-body">
+        <h5 class="card-title">362 likes</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+          content.</p>
+      </div>
+    </div>
+
+    <div class="card border-ligth mb-3 mx-auto d-block " style="max-width: 20rem;">
+      <h5 class="card-title card-header">Jungle!</h5>
+      <img
+        src="https://images.unsplash.com/photo-1743031031853-15698b5b8419?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        class="feed rounded mx-auto d-block" alt="Image 3">
+      <div class="card-body">
+        <h5 class="card-title">794 likes</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+          content.</p>
+      </div>
+    </div>
+
+    <div class="card border-ligth mb-3 mx-auto d-block " style="max-width: 20rem;">
+      <h5 class="card-title card-header">Mountain!</h5>
+      <img
+        src="https://images.unsplash.com/photo-1745750747233-c09276a878b3?q=80&w=2650&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        class="feed rounded mx-auto d-block" alt="Image 4">
+      <div class="card-body">
+        <h5 class="card-title">952 likes</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+          content.</p>
+      </div>
+    </div>
+
+    <div class="card border-ligth mb-3 mx-auto d-block " style="max-width: 20rem;">
+      <h5 class="card-title card-header">Cherry Tree!</h5>
+      <img
+        src="https://images.unsplash.com/photo-1744429523595-2c06b8611242?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        class="feed rounded mx-auto d-block" alt="Image 5">
+      <div class="card-body">
+        <h5 class="card-title">412 likes</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+          content.</p>
+      </div>
+    </div>
+
+    <div class="card border-ligth mb-3 mx-auto d-block " style="max-width: 20rem;">
+      <h5 class="card-title card-header">Desert!</h5>
+      <img
+        src="https://plus.unsplash.com/premium_photo-1721268770804-f9db0ce102f8?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        class="feed rounded mx-auto d-block" alt="Image 6">
+      <div class="card-body">
+        <h5 class="card-title">689 likes</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+          content.</p>
+      </div>
+    </div>
+
+    <div class="card border-ligth mb-3 mx-auto d-block " style="max-width: 20rem;">
+      <h5 class="card-title card-header">Mirror!</h5>
+      <img
+        src="https://images.unsplash.com/photo-1745179177381-5709a1e1723b?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        class="feed rounded mx-auto d-block" alt="Image 7">
+      <div class="card-body">
+        <h5 class="card-title">319 likes</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+          content.</p>
+      </div>
+    </div>
+
+    <div class="card border-ligth mb-3 mx-auto d-block " style="max-width: 20rem;">
+      <h5 class="card-title card-header">Petals!</h5>
+      <img
+        src="https://images.unsplash.com/photo-1744230350348-23305ba56e6c?q=80&w=2557&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        class="feed rounded mx-auto d-block" alt="Image 8">
+      <div class="card-body">
+        <h5 class="card-title">997 likes</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+          content.</p>
+      </div>
+    </div>
+
+    <div class="card border-ligth mb-3 mx-auto d-block " style="max-width: 20rem;">
+      <h5 class="card-title card-header">City!</h5>
+      <img
+        src="https://images.unsplash.com/photo-1742943679521-f4736500a471?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        class="feed rounded mx-auto d-block" alt="Image 9">
+      <div class="card-body">
+        <h5 class="card-title">923 likes</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+          content.</p>
+      </div>
+    </div>
+
+    <div class="card border-ligth mb-3 mx-auto d-block " style="max-width: 20rem;">
+      <h5 class="card-title card-header">Pigeon!</h5>
+      <img
+        src="https://images.unsplash.com/photo-1744198013781-eeb3135aaa0c?q=80&w=2564&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        class="feed rounded mx-auto d-block" alt="Image 10">
+      <div class="card-body">
+        <h5 class="card-title">786 likes</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+          content.</p>
+      </div>
+    </div>
+
+    <div class="card border-ligth mb-3 mx-auto d-block " style="max-width: 20rem;">
+      <h5 class="card-title card-header">Sunny!</h5>
+      <img
+        src="https://images.unsplash.com/photo-1741290726567-a1aaaa43f625?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        class="feed rounded mx-auto d-block" alt="Image 11">
+      <div class="card-body">
+        <h5 class="card-title">971 likes</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+          content.</p>
+      </div>
+    </div>
+
+    <div class="card border-ligth mb-3 mx-auto d-block " style="max-width: 20rem;">
+      <h5 class="card-title card-header">Flowers!</h5>
+      <img
+        src="https://images.unsplash.com/photo-1744882838449-b3ad2ceff9a8?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        class="feed rounded mx-auto d-block" alt="Image 12">
+      <div class="card-body">
+        <h5 class="card-title">433 likes</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+          content.</p>
+      </div>
+    </div>
+
+  </div>
+  </div>
+
+
+</body>
+
+</html>

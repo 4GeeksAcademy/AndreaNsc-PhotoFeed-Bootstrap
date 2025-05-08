@@ -1,13 +1,19 @@
-.create {justify-content: flex-end;}
+.create {
+  display: flex;
+  justify-content: flex-end;
+}
 
 .galeria {
-    width: 100%;
-  aspect-ratio: 1/1;
+  width: 100%;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
+  display: block;
 }
 
 .feed {
   width: 100%;
-  height: auto;    
+  height: auto;
+  object-fit: contain; 
+  display: block;
 }
   
